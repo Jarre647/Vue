@@ -1,4 +1,5 @@
 ﻿const car = (name, model, owner, year, phone, image) => ({ name, model, owner, year, phone, image })
+const log = (text, type, date = new Date()) => (text, type, date)
 
 const cars = [
     car('Bugatty', 'Veyron', 'Seva', 2016, '+7 000 00-00', 'images/a.jpg'),
@@ -15,12 +16,25 @@ new Vue({
         selectedCarIndex: 0,
         phoneVisibility: false,
         search: '',
-        modalVisibility: false
+        modalVisibility: false,
+        logs: []
     },
     methods: {
-        selectCar: function (index) {
+        selectCar(index) {
             this.car = cars[index],
             this.selectedCarIndex = index
+        },
+        newOrder() {
+            this.modalVisibility = false;
+            this.logs.push(
+                log(`Success order: ${this.car.name} - ${this.car.model}`, 'ok')
+            )
+        },
+        cancelOrder() {
+            this.modalVisibility = false;
+            this.logs.push(
+                log(`Success order: ${this.car.name} - ${this.car.model}`, 'cnl')
+            )
         }
     },
     computed: {
