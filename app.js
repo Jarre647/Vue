@@ -1,22 +1,28 @@
-﻿const car = (name, model, owner, year, phone, image) => ({ name, model, owner, year, phone, image })
-const log = (text, type, date = new Date()) => (text, type, date)
+﻿const descriptionMotor =
+    (model, type, power, voltage, ratedСurrent, speed, image) => ({
+        model,
+        type,
+        power,
+        voltage,
+        ratedСurrent,
+        speed,
+        image
+    });
 
-const cars = [
-    car('Bugatty', 'Veyron', 'Seva', 2016, '+7 000 00-00', 'images/a.jpg'),
-    car('Ford', 'Vyn', 'Eva', 2016, '+7 001 00-00', 'images/b.jpg'),
-    car('MB', 'ron', 'Vasja', 2016, '+7 020 00-00', 'images/c.jpg'),
-]
-const subMenus =[ ]
-Vue.component('submenu'
-{
-    data: subMenus,
-        template:''
-})
+const DescriptionsMotors = [
+    descriptionMotor('ABLE ML631-2', 'single phase', '0,18', '220', '1.48', '2800', 'images/ml631.jpg')
+];
 
-new Vue({
+//Vue.component('submenu'
+//{
+//    data: subMenus,
+//        template:''
+//})
+
+let vue = new Vue({
     el: '#app',
     data: {
-      
+        DescriptionsMotors
     },
     methods: {
      

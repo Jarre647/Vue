@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="styles/app.css" />
     <title>VueJS</title>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -25,46 +25,89 @@
 </head>
 <body>
     <noscript><div><img src="https://mc.yandex.ru/watch/55774969" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <div>
-
-            <div class="row" style="background-color: darkmagenta">
-
-                <div class="col-sm-2">
-                    <a>
+    <div id="app">
+        <div class="row" style="background-color: darkmagenta">
+            <img  class="logo left" src="https://img.icons8.com/android/48/000000/google-scholar.png">
+            <ul class="nav nav justify-content-end right right_top ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
                         About us
                     </a>
-                </div>
-                <div class="col-sm-2">
-                    <a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
                         Contacts
                     </a>
-                </div>
-                <div class="col-sm-2">
-                    <a>List Electrik Motor</a>
-                </div>
-                <div class="col-sm-2">
-                    <a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
                         Basket
                     </a>
-                </div>
-                <div class="col-sm-2">
-                    <a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
                         Help
                     </a>
-                </div>
-                <div class="col-sm-2">
-                    <a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
                         language
                     </a>
-                </div>
-            </div>
+                </li>
+            </ul>
+            <!--<div class="col-sm-2">
+        <div >
+
+            <a>
+                About us
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <a>
+            Contacts
+        </a>
+    </div>
+    <div class="col-sm-2">
+        <a>List Electrik Motor</a>
+    </div>
+    <div class="col-sm-2">
+        <a>
+            Basket
+        </a>
+    </div>
+    <div class="col-sm-2">
+        <a>
+            Help
+        </a>
+    </div>
+    <div class="col-sm-2">
+        <a>
+            language
+        </a>
+    </div>-->
+        </div>
 
         <div class="row">
-            <div class="col-sm-4" style="background-color: aqua">
-                <p>left</p>
+            <div class="col-sm-4" style="border-right: blanchedalmond">
+                <div class="title-bl-cat">Catalog</div>
+
+                <div class="cats-list">
+                    <ul class="list-group">
+                        <li class="list-item"><a href="#">Цилиндрические</a></li>
+                        <li class="list-item"><a href="#">Червячные</a></liclass="list-item">
+                        <li class="list-item"><a href="#">Индустриальные</a></li>
+                    </ul>
+
+                    <span class="go_d"></span>
+
+                </div>
             </div>
             <div class="col-sm-8" style="background-color: bisque">
                 <p>right</p>
+                <img :src="DescriptionsMotors[0].image" alt="motors" />
+                <!--<img src="images/ml631.jpg" alt=""/>-->
+
             </div>
         </div>
     </div>
